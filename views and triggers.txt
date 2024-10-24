@@ -1,0 +1,17 @@
+CREATE VIEW SalesView AS
+SELECT name, city, commission
+FROM Salesman
+WHERE commission > 0.1;
+
+SELECT * FROM SalesView;
+
+
+
+CREATE OR REPLACE TRIGGER update_commission
+BEFORE UPDATE OF commission ON Salesman
+FOR EACH ROW
+WHEN (NEW.commission > 0.2)
+BEGIN
+    -- Trigger logic: Display warning if commission exceeds 20%
+    DBMS_OUTPUT.PUT_LINE('Warning: Commission exceeds 20%');
+END;

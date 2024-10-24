@@ -1,0 +1,23 @@
+CREATE OR REPLACE PROCEDURE calculate_salary (
+    employee_id IN NUMBER, 
+    bonus OUT NUMBER
+) AS
+BEGIN
+    SELECT salary * 0.10 INTO bonus
+    FROM employees
+    WHERE id = employee_id;
+END calculate_salary;
+
+
+
+CREATE OR REPLACE FUNCTION get_employee_salary (
+    employee_id IN NUMBER
+) RETURN NUMBER
+AS
+    salary NUMBER;
+BEGIN
+    SELECT salary INTO salary
+    FROM employees
+    WHERE id = employee_id;
+    RETURN salary;
+END get_employee_salary;

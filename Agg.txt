@@ -1,0 +1,18 @@
+SELECT O.* 
+FROM Orders O 
+INNER JOIN Salesman S 
+ON O.salesman_id = S.salesman_id 
+WHERE S.name = 'Paul Adam';
+
+
+SELECT * 
+FROM Orders 
+WHERE ord_date = '2012-10-10' 
+AND purch_amt > (SELECT AVG(purch_amt) FROM Orders WHERE ord_date = '2012-10-10');
+
+
+SELECT O.* 
+FROM Orders O 
+INNER JOIN Salesman S 
+ON O.salesman_id = S.salesman_id 
+WHERE S.city = 'New York';

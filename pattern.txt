@@ -1,0 +1,18 @@
+SELECT * 
+FROM employees 
+WHERE last_name LIKE 'C%';
+
+
+SELECT * 
+FROM employees 
+WHERE last_name NOT LIKE 'C%';
+
+
+SELECT * 
+FROM employees 
+WHERE last_name LIKE '%C%';
+
+
+SELECT * 
+FROM employees 
+WHERE last_name LIKE '__C%';  -- Two underscores for first and second position

@@ -1,0 +1,19 @@
+GRANT SELECT, INSERT
+ON employees
+TO user1;
+
+
+GRANT ALL
+ON employees
+TO user1
+WITH GRANT OPTION;
+
+
+REVOKE privilege_name
+ON object_name
+FROM {user_name | PUBLIC | role_name};
+
+
+REVOKE SELECT
+ON employees
+FROM user1;

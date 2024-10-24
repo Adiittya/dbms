@@ -1,0 +1,20 @@
+CREATE TABLE table_name (
+   column_1 datatype,
+   column_2 datatype,
+   column_3 datatype,
+   ...
+);
+
+
+DESC table_name;
+
+RENAME TABLE old_table_name TO new_table_name;
+
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+
+TRUNCATE TABLE table_name;
+
+DROP TABLE table_name;
